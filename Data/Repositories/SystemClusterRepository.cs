@@ -13,15 +13,6 @@ namespace Data.Repositories
 
         private string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
 
-
-        public SystemClusterRepository()
-        {
-            // עלייה מרמת bin\Debug\net8.0 לשורש הפרויקט
-            //var projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
-
- 
-        }
-
         public string GetMessage()
         {
              List<TestModel> _data;
@@ -41,12 +32,6 @@ namespace Data.Repositories
             _data = JsonSerializer.Deserialize<List<TestModel>>(jsonString) ?? new List<TestModel>();
             return _data.FirstOrDefault()?.message ?? "אין נתונים";
         }
-
-
-
-
-        //////////////////////////
-        //private readonly string _jsonFilePath = "Data/cluster-data.json";
 
 
         public RootObjectOfClusterGroupDetails GetClusterGroupDetailsFromJson()
