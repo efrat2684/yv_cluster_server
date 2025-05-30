@@ -1,0 +1,46 @@
+{
+  "totalCount": 9000000,
+
+  "details": [
+    {
+      "LastName": {
+        "Count": 2500,
+        "Code": "T430413",
+        "Value": "Pozes"
+      },
+      "LastNameInPlaces": {
+        "TotalCount": 1500,
+        "Count": 1900,
+        "Code": "",
+        "Value": "Rhine"
+      }
+
+    },
+    {
+      "LastName": {
+        "Count": 1500,
+        "Code": "T86132",
+        "Value": "Reinish"
+      },
+      "LastNameInPlaces": {
+        "TotalCount": 3000,
+        "Count": 2500,
+        "Code": "",
+        "Value": "Koeln"
+      }
+    },
+    {
+      "LastName": {
+        "Count": 850,
+        "Code": "T86132",
+        "Value": "Adler"
+      },
+      "LastNameInPlaces": {
+        "TotalCount": 1600,
+        "Count": 3000,
+        "Code": "",
+        "Value": "Loeln"
+      }
+    }
+  ]
+}

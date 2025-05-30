@@ -1,0 +1,344 @@
+[
+  {
+    "title": "CLUSTER_ID",
+    "record1": "16229261, Reinisch, Pozes, Matilda",
+    "record2": "16229261, Reinisch, Pozes, Matilda",
+    "record3": "16229261, Reinisch, Pozes, Matilda",
+    "record4": "16229261, Reinisch, Pozes, Matilda",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "FIRST_NAME",
+    "record1": "Matilda",
+    "record2": "Matilda",
+    "record3": "Matilda Matia",
+    "record4": "Matilda",
+    "record5": "Matilda",
+    "record6": "Adler"
+  },
+  {
+    "title": "LAST_NAME",
+    "record1": "Reinish Pozes",
+    "record2": "Reinish Pozes",
+    "record3": "Reinisch Reinish Pozes",
+    "record4": "Reinisch Reinish Pozes",
+    "record5": "Reinisch Reinish Pozes",
+    "record6": "Adler"
+  },
+  {
+    "title": "MAIDEN_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "TITLE",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "GENDER",
+    "record1": "Female",
+    "record2": "Female",
+    "record3": "Female",
+    "record4": "Female",
+    "record5": "Female",
+    "record6": "Male"
+  },
+  {
+    "title": "FATHER_FIRST_NAME",
+    "record1": "Shlomo Zalman",
+    "record2": "Shlomo Zalman",
+    "record3": "Shlomo Zalman",
+    "record4": "Shlomo Zalman",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "FATHER_LAST_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "MOTHER_FIRST_NAME",
+    "record1": "Miriam",
+    "record2": "Miriam",
+    "record3": "Miriam",
+    "record4": "Miriam",
+    "record5": "Miriam",
+    "record6": ""
+  },
+  {
+    "title": "MOTHER_MAIDEN_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "Teitler",
+    "record6": ""
+  },
+  {
+    "title": "AGE",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "DATE_BIRTH",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": "26/09/1892"
+  },
+  {
+    "title": "PLACE_BIRTH",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "CITIZENSHIP",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "SPOUSES_FIRST_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "SPOUSES_MAIDEN_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "MARITAL_STATUS",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "PROFESSION",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "PERMANENT_PLACE",
+    "record1": "Sniatin,Sniatyn,Stanislawow,Poland",
+    "record2": "Sniatyn,Sniatyn,Stanislawow,Poland",
+    "record3": "Sniatyn,Sniatyn,Stanislawow,Poland",
+    "record4": "Sniatyn,Sniatyn,Stanislawow,Poland",
+    "record5": "Sniatyn,Sniatyn,Stanislawow,Poland",
+    "record6": ""
+  },
+  {
+    "title": "RESIDENCEADDRESS",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "PLACE_DURING_THE_WAR",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": "Mauthausen,Camp,Austria"
+  },
+  {
+    "title": "ADDRESS_DURING_THE_WAR",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "ORIGIN_DEPORTATION",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "DEST_OF_DEPORTATION",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "TRANSPORT_DETAILS",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "PLACE_DEATH",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": "Mauthausen,Camp,Austria"
+  },
+  {
+    "title": "PRISONERNUM",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "DATE_DEATH",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": "25/11/1944"
+  },
+  {
+    "title": "CAUSE_DEATH",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "STATUS",
+    "record1": "alive post war",
+    "record2": "alive post war",
+    "record3": "alive post war",
+    "record4": "alive post war",
+    "record5": "alive post war",
+    "record6": "murdered"
+  },
+  {
+    "title": "SOURCE",
+    "record1": "Page of Testimony",
+    "record2": "Page of Testimony",
+    "record3": "Page of Testimony",
+    "record4": "Page of Testimony",
+    "record5": "Page of Testimony",
+    "record6": "List of murdered persons"
+  },
+  {
+    "title": "SUBMITTER_LAST_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "SUBMITTER_FIRST_NAME",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "RELATIONSHIP_TO_VICTIM",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "DATE_CREATED",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "CONTENT_ADD",
+    "record1": "",
+    "record2": "",
+    "record3": "",
+    "record4": "",
+    "record5": "",
+    "record6": ""
+  },
+  {
+    "title": "BOOK_ID",
+    "record1": "15898758",
+    "record2": "15900653",
+    "record3": "15900842",
+    "record4": "15900962",
+    "record5": "15901353",
+    "record6": "7029235"
+  },
+  {
+    "title": "BELONGS_TO",
+    "record1": "Yad Vashem - Pages of Testimony Names Memorial Collection",
+    "record2": "Yad Vashem - Pages of Testimony Names Memorial Collection",
+    "record3": "Yad Vashem - Pages of Testimony Names Memorial Collection",
+    "record4": "Yad Vashem - Pages of Testimony Names Memorial Collection",
+    "record5": "Yad Vashem - Pages of Testimony Names Memorial Collection",
+    "record6": "Card file of Jews from Hungary who perished, prepared by the Hungarian branch of the World Jewish Congress, 1945-1946"
+  }
+]

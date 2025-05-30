@@ -1,0 +1,36 @@
+{
+  "reservationNumber": "RSV-123456789",
+  "basicTourDetails": {
+    "partOfDay": 0,
+    "startTime": "10:00",
+    "numberOfVisitors": 3,
+    "date": "2023-12-19",
+    "scheduleEventGuid": "987"
+  },
+  "additionalTourDetails": {
+    "firstName": "test",
+    "lastName": "test",
+    "email": "test@gmail.com",
+    "phoneNumber": "0529877899",
+    "isWithAudioGuide": false,
+    "audioGuideLanguage": "he",
+    "audioGuideQuantity": 0,
+    "isPrivicyPolicy": false,
+    "isReceivingNewsletterMessages": false,
+    "totalPayment": 500
+  },
+  "groupList": [
+    {
+      "guid": "2222",
+      "numberOfVisitors": 1,
+      "name": "group 1",
+      "isGroupArrived": false
+    },
+    {
+      "guid": "2222",
+      "numberOfVisitors": 1,
+      "name": "group 1",
+      "isGroupArrived": false
+    }
+  ]
+}

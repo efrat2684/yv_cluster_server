@@ -1,0 +1,250 @@
+{
+  "d": {
+    "__type": "ClusteredNamesSystem.classes.ClusterGroupWithCrmLinks",
+    "ClusteredNameRowList": [
+      {
+        "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+        "BookId": "15040243",
+        "FirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99981",
+          "Value": "Yosef"
+        },
+        "LastName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T71100 ",
+          "Value": "Weiss"
+        },
+        "FatherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99807",
+          "Value": "Yehuda"
+        },
+        "MotherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99403",
+          "Value": "Chana"
+        },
+        "PlaceOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "5706532",
+          "Value": "\u003c\u003e,\u003c\u003e,\u003c\u003e,Czechoslovakia"
+        },
+        "PermanentPlace": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "5555232",
+          "Value": "Vishna Vizniza,Mukacevo,Carpathian Ruthenia,Czechoslovakia"
+        },
+        "DateOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "Source": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T1196978",
+          "Value": "Page of Testimony"
+        },
+        "SpouseFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "MaidenName": "",
+        "IsClustered": 1,
+        "ExistsClusterId": "15276552",
+        "RelatedFnameGroupId": null,
+        "IsHasRelatedFname": false,
+        "Ind": 129381,
+        "HasRelatedGroups": false,
+        "Score": "0",
+        "NumberOfSuggestions": 1,
+        "RelatedFnameList": null
+      },
+      {
+        "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+        "BookId": "15094470",
+        "FirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99981",
+          "Value": "Yosef"
+        },
+        "LastName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T418203 ",
+          "Value": "Prusakas Prusak"
+        },
+        "FatherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T98031",
+          "Value": "Dovydas"
+        },
+        "MotherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T98031 T104283 T99809 T97644",
+          "Value": "Dovyd Sara Ita Gitel"
+        },
+        "PlaceOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "5501619",
+          "Value": "Keidan,Kedainiai,\u003c\u003e,Lithuania"
+        },
+        "PermanentPlace": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "DateOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "Source": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T1175246",
+          "Value": "List of persecuted persons"
+        },
+        "SpouseFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "MaidenName": "",
+        "IsClustered": 0,
+        "ExistsClusterId": "",
+        "RelatedFnameGroupId": null,
+        "IsHasRelatedFname": false,
+        "Ind": 129381,
+        "HasRelatedGroups": false,
+        "Score": "0",
+        "NumberOfSuggestions": 1,
+        "RelatedFnameList": null
+      },
+      {
+        "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+        "BookId": "15099933",
+        "FirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99981",
+          "Value": "Yosef"
+        },
+        "LastName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T64464 ",
+          "Value": "Berger"
+        },
+        "FatherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T96575 T100857",
+          "Value": "Alter Meir"
+        },
+        "MotherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T97644",
+          "Value": "Gittel"
+        },
+        "PlaceOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "5561233",
+          "Value": "Nowy Zmigrod,Jaslo,Krakow,Poland"
+        },
+        "PermanentPlace": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "5518238",
+          "Value": "Munich,München (München),Bavaria,Germany"
+        },
+        "DateOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": "30/08/1887"
+        },
+        "Source": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T1196978",
+          "Value": "Page of Testimony"
+        },
+        "SpouseFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T95470",
+          "Value": "Yentl"
+        },
+        "MaidenName": "",
+        "IsClustered": 1,
+        "ExistsClusterId": "15096313",
+        "RelatedFnameGroupId": null,
+        "IsHasRelatedFname": false,
+        "Ind": 129381,
+        "HasRelatedGroups": false,
+        "Score": "0",
+        "NumberOfSuggestions": 1,
+        "RelatedFnameList": null
+      },
+      {
+        "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+        "BookId": "11696332",
+        "FirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T99981",
+          "Value": "Joseph"
+        },
+        "LastName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T64464 ",
+          "Value": "Berger"
+        },
+        "FatherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T96575 T100857",
+          "Value": "Alter Meir"
+        },
+        "MotherFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "PlaceOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "PermanentPlace": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "DateOfBirth": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "",
+          "Value": ""
+        },
+        "Source": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T1098591",
+          "Value": "Record of murdered persons"
+        },
+        "SpouseFirstName": {
+          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+          "Code": "T100214",
+          "Value": "Ientil"
+        },
+        "MaidenName": "",
+        "IsClustered": 1,
+        "ExistsClusterId": "15096313",
+        "RelatedFnameGroupId": null,
+        "IsHasRelatedFname": false,
+        "Ind": 129381,
+        "HasRelatedGroups": false,
+        "Score": "0",
+        "NumberOfSuggestions": 1,
+        "RelatedFnameList": null
+      }
+    ],
+    "CrmLinkList": [
+      "http://crm2016/yadvashem2016/main.aspx?etc=112\u0026extraqs=\u0026id=%7bc133f9e9-092c-f011-8142-00505691117e%7d\u0026newWindow=true\u0026pagetype=entityrecord#343512922",
+      "http://crm2016/yadvashem2016/main.aspx?etc=112\u0026extraqs=\u0026id=%7bc133f9e9-092c-f011-8142-00505691117e%7d\u0026newWindow=true\u0026pagetype=entityrecord#343515847",
+      "http://crm2016/yadvashem2016/main.aspx?etc=112\u0026extraqs=\u0026id=%7bc133f9e9-092c-f011-8142-00505691117e%7d\u0026newWindow=true\u0026pagetype=entityrecord#343955882",
+      "http://crm2016/yadvashem2016/main.aspx?etc=112\u0026extraqs=\u0026id=%7bc133f9e9-092c-f011-8142-00505691117e%7d\u0026newWindow=true\u0026pagetype=entityrecord#343512173"
+    ],
+    "contact": null
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "BookIdList": [
+    "15901353",
+    "7029235"
+  ],
+  "SapirClusterDetails": [
+    {
+      "Field": "FirstName",
+      "Values": [
+        {
+          "NameCode": "T101592",
+          "Value": "Matilda / מתילדה",
+          "Counter": 1
+        },
+        {
+          "NameCode": "T96064",
+          "Value": "Adler / אדלר",
+          "Counter": 1
+        }
+      ],
+      "HasOtherOption": false
+    },
+    {
+      "Field": "LastName",
+      "Values": [
+        {
+          "NameCode": "T182674",
+          "Value": "Reinisch",
+          "Counter": 1
+        },
+        {
+          "NameCode": "T60363",
+          "Value": "Adler / אדלר",
+          "Counter": 1
+        },
+        {
+          "NameCode": "T86132",
+          "Value": "Reinish / רייניש",
+          "Counter": 2
+        },
+        {
+          "NameCode": "T430413",
+          "Value": "Pozes / פוזס",
+          "Counter": 3
+        }
+      ],
+      "HasOtherOption": false
+    },
+    {
+      "Field": "PlaceOfBirth",
+      "Values": [
+        {
+          "NameCode": "5705967",
+          "Value": "Unknown Place",
+          "Counter": -1
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "AuthenticDateOfBirth",
+      "Values": [
+        {
+          "NameCode": "",
+          "Value": "Unknown Date",
+          "Counter": -1
+        },
+        {
+          "NameCode": "26/09/1892",
+          "Value": "26/09/1892",
+          "Counter": 1
+        },
+        {
+          "NameCode": "1892",
+          "Value": "1892",
+          "Counter": 2
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "RestoredDateOfBirth",
+      "Values": [
+        {
+          "NameCode": "",
+          "Value": "Unknown Date",
+          "Counter": -1
+        },
+        {
+          "NameCode": "26/09/1892",
+          "Value": "26/09/1892",
+          "Counter": 1
+        },
+        {
+          "NameCode": "01/01/1892",
+          "Value": "1892",
+          "Counter": 2
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "PermanentPlace",
+      "Values": [
+        {
+          "NameCode": "5705967",
+          "Value": "Unknown Place",
+          "Counter": -1
+        },
+        {
+          "NameCode": "5441046",
+          "Value": "Sniatyn,Sniatyn,Stanislawow,Poland",
+          "Counter": 1
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "PlaceOfDeath",
+      "Values": [
+        {
+          "NameCode": "5705967",
+          "Value": "Unknown Place",
+          "Counter": -1
+        },
+        {
+          "NameCode": "5345375",
+          "Value": "Mauthausen,Camp,Austria",
+          "Counter": 1
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "AuthenticDateOfDeath",
+      "Values": [
+        {
+          "NameCode": "",
+          "Value": "Unknown Date",
+          "Counter": -1
+        },
+        {
+          "NameCode": "25/11/1944",
+          "Value": "25/11/1944",
+          "Counter": 1
+        },
+        {
+          "NameCode": "1944",
+          "Value": "1944",
+          "Counter": 2
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "RestoredDateOfDeath",
+      "Values": [
+        {
+          "NameCode": "",
+          "Value": "Unknown Date",
+          "Counter": -1
+        },
+        {
+          "NameCode": "25/11/1944",
+          "Value": "25/11/1944",
+          "Counter": 1
+        },
+        {
+          "NameCode": "01/01/1944",
+          "Value": "1944",
+          "Counter": 2
+        }
+      ],
+      "HasOtherOption": true
+    },
+    {
+      "Field": "Gender",
+      "Values": [
+        {
+          "NameCode": "T6259",
+          "Value": "Female",
+          "Counter": 1
+        },
+        {
+          "NameCode": "T6258",
+          "Value": "Male",
+          "Counter": 1
+        }
+      ],
+      "HasOtherOption": false
+    },
+    {
+      "Field": "Fate",
+      "Values": [
+        {
+          "NameCode": "T9757738",
+          "Value": "alive postwar",
+          "Counter": 1
+        },
+        {
+          "NameCode": "T9421406",
+          "Value": "murdered",
+          "Counter": 1
+        }
+      ],
+      "HasOtherOption": false
+    }
+  ],
+  "Comments": null,
+  "Level": null,
+  "GroupHasMultimedia": false,
+  "GroupId": null,
+  "StatusCode": 0
+}

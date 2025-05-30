@@ -1,0 +1,124 @@
+{
+  "7029235": [
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "7029235",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T96064",
+        "Value": "Adler"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T60363 ",
+        "Value": "Adler"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": "26/09/1892"
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T3228",
+        "Value": "List of murdered persons"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 0,
+      "ExistsClusterId": "",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    }
+  ],
+  "1111111": [
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "7029235",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T96064",
+        "Value": "Adler"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T60363 ",
+        "Value": "Adler"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": "26/09/1892"
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T3228",
+        "Value": "List of murdered persons"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 0,
+      "ExistsClusterId": "",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    }
+  ]
+}

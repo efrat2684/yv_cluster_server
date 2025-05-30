@@ -1,0 +1,6 @@
+@SystemCluster_HostAddress = http://localhost:5029
+
+GET {{SystemCluster_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
