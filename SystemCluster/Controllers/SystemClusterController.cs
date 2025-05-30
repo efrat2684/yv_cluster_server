@@ -9,15 +9,15 @@ namespace SystemCluster.Controllers
     [Route("api/[controller]")]
     public class SystemClusterController : Controller
     {
-        // GET: SystemCluster
+       
         private readonly ISystemClusterService _service;
 
         public SystemClusterController(ISystemClusterService service)
         {
             _service = service;
         }
-        // GET: SystemCluster
-        [HttpGet("test")]
+        [Route("test")]
+        [HttpGet]
         public IActionResult GetWeather()
         {
             var msg = _service.GetMessageFromService();
