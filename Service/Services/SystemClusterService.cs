@@ -23,9 +23,9 @@ namespace Service.Services
             return _repository.GetMessage();
         }
 
-        public RootObjectOfClusterGroupDetails GetClusterGroupDetailsFromJson()
+        public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
         {
-            return _repository.GetClusterGroupDetailsFromJson();
+            return _repository.GetClusterGroupDetails();
         }
     }
 }

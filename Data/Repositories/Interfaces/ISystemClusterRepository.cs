@@ -9,7 +9,7 @@ namespace Data.Repositories.Interfaces
      public interface ISystemClusterRepository
     {
         string GetMessage();
-        RootObjectOfClusterGroupDetails GetClusterGroupDetailsFromJson();
+        RootObjectOfClusterGroupDetails GetClusterGroupDetails();
 
     }
 }

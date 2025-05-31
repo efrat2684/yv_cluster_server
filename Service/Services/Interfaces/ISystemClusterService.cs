@@ -9,7 +9,7 @@ namespace Service.Services.Interfaces
     public interface ISystemClusterService
     {
         string GetMessageFromService();
-        RootObjectOfClusterGroupDetails GetClusterGroupDetailsFromJson();
+        RootObjectOfClusterGroupDetails GetClusterGroupDetails();
 
     }
 }

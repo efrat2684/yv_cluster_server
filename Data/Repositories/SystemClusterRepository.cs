@@ -34,7 +34,7 @@ namespace Data.Repositories
         }
 
 
-        public RootObjectOfClusterGroupDetails GetClusterGroupDetailsFromJson()
+        public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
         {
 
             var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getClusterGroupDetails.json");
