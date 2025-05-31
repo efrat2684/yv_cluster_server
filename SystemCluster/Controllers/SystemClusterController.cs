@@ -16,7 +16,7 @@ namespace SystemCluster.Controllers
         {
             _service = service;
         }
-        //פונקצית נסיון לשליפת הודעה מתוך קובץ JSON
+        //JSON פונקצית נסיון לשליפת הודעה מתוך קובץ 
         [Route("test")]
         [HttpGet]
         public IActionResult GetWeather()
@@ -24,7 +24,7 @@ namespace SystemCluster.Controllers
             var msg = _service.GetMessageFromService();
             return Ok(new { message = msg });
         }
-        //שליפת נתונים לקומפוננטת  TableGroupIdDetailsComponent
+        //TableGroupIdDetailsComponent שליפת נתונים לקומפוננטת     
         [Route("GetClusterGroupDetails")]
         [HttpGet]
         public ActionResult<RootObjectOfClusterGroupDetails> GetClusterGroupDetails()
