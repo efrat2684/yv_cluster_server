@@ -24,6 +24,7 @@ namespace SystemCluster.Controllers
             var msg = _service.GetMessageFromService();
             return Ok(new { message = msg });
         }
+
         //TableGroupIdDetailsComponent שליפת נתונים לקומפוננטת     
         [Route("GetClusterGroupDetails")]
         [HttpGet]
@@ -32,6 +33,21 @@ namespace SystemCluster.Controllers
             try
             {
                 var result = _service.GetClusterGroupDetails();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+        //PieComponentDistributionModalComponent שליפת נתונים לקומפוננטת     
+        [Route("GetStatisticData")]
+        [HttpGet]
+        public ActionResult<StatisticData> GetStatisticData()
+        {
+            try
+            {
+                var result = _service.GetStatisticData();
                 return Ok(result);
             }
             catch (Exception ex)

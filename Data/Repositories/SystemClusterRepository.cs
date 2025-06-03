@@ -50,5 +50,22 @@ namespace Data.Repositories
 
             return result;
         }
+
+        public StatisticData GetStatisticData()
+        {
+
+            var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getStatisticData.json");
+
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException("JSON file not found", filePath);
+
+            string jsonContent = File.ReadAllText(filePath);
+            var result = JsonSerializer.Deserialize<StatisticData>(jsonContent, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            return result;
+        }
     }
     }

@@ -10,6 +10,7 @@ namespace Data.Repositories.Interfaces
     {
         string GetMessage();
         RootObjectOfClusterGroupDetails GetClusterGroupDetails();
+        StatisticData GetStatisticData();
 
     }
 }

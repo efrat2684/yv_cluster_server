@@ -10,6 +10,8 @@ namespace Service.Services.Interfaces
     {
         string GetMessageFromService();
         RootObjectOfClusterGroupDetails GetClusterGroupDetails();
+        StatisticData GetStatisticData();
+
 
     }
 }
