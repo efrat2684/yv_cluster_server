@@ -1,9 +1,5 @@
-﻿using Data.Repositories.Interfaces;
-using Data.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using Data.Models;
+using Data.Repositories.Interfaces;
 using System.Text.Json;
 
 namespace Data.Repositories
@@ -15,10 +11,10 @@ namespace Data.Repositories
 
         public string GetMessage()
         {
-             List<TestModel> _data;
+            List<TestModel> _data;
 
-        // בניית הנתיב לקובץ Test.json
-             var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "Test.json");
+            // בניית הנתיב לקובץ Test.json
+            var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "Test.json");
 
             if (!File.Exists(filePath))
             {
@@ -50,5 +46,8 @@ namespace Data.Repositories
 
             return result;
         }
+
+
+
     }
-    }
+}
