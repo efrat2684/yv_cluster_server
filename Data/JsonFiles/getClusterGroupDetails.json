@@ -113,7 +113,7 @@
         "IsClustered": 0,
         "ExistsClusterId": "",
         "RelatedFnameGroupId": null,
-        "IsHasRelatedFname": false,
+        "RelatedFnameGroupId": false,
         "Ind": 129381,
         "HasRelatedGroups": false,
         "Score": "0",

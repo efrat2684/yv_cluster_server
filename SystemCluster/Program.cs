@@ -3,6 +3,8 @@ using Data.Repositories.Interfaces;
 using Data.Repositories;
 using Service.Services.Interfaces;
 using Service.Services;
+using Data.context;
+using Microsoft.EntityFrameworkCore;
 
 namespace SystemCluster
 {
@@ -10,6 +12,7 @@ namespace SystemCluster
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
             // הוספת שירותי CORS
@@ -29,6 +32,10 @@ namespace SystemCluster
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ISystemClusterService, SystemClusterService>();
             builder.Services.AddScoped<ISystemClusterRepository, SystemClusterRepository>();
+
+
+            builder.Services.AddDbContext<SystemClusterDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SystemClusterDb")));
 
             var app = builder.Build();
 
