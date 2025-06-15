@@ -27,5 +27,9 @@ namespace Service.Services
         {
             return _repository.GetClusterGroupDetails();
         }
+        public StatisticData GetStatisticData()
+        {
+            return _repository.GetStatisticData();
+        }
     }
 }

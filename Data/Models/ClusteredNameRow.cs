@@ -14,7 +14,7 @@ public class ClusteredNameRow
     public string MaidenName { get; set; }
     public int IsClustered { get; set; }
     public string ExistsClusterId { get; set; }
-    public int? RelatedFnameGroupId { get; set; }
+    public object RelatedFnameGroupId { get; set; }
     public bool IsHasRelatedFname { get; set; }
     public int Ind { get; set; }
     public bool HasRelatedGroups { get; set; }
