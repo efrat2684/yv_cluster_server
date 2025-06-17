@@ -227,7 +227,538 @@
       },
       "MaidenName": "",
       "IsClustered": 1,
+      "ExistsClusterId": "1458320",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "120000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "5187246",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1000000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "5187246",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1000000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "4089696",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1500000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "5187246",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1000000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "20547811",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1800000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
       "ExistsClusterId": "12371059",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "2000000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "55530600",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1000000",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "55530600",
+      "RelatedFnameGroupId": null,
+      "IsHasRelatedFname": false,
+      "Ind": 0,
+      "HasRelatedGroups": false,
+      "Score": null,
+      "NumberOfSuggestions": 0,
+      "RelatedFnameList": null
+    },
+    {
+      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
+      "BookId": "1000200",
+      "FirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T101216",
+        "Value": "Mintza"
+      },
+      "LastName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T77688 ",
+        "Value": "Mamiof"
+      },
+      "FatherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MotherFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "PlaceOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "PermanentPlace": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "5533200",
+        "Value": "Resekne,Rezeknes,Latgale,Latvia"
+      },
+      "DateOfBirth": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "Source": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "T1196978",
+        "Value": "Page of Testimony"
+      },
+      "SpouseFirstName": {
+        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
+        "Code": "",
+        "Value": ""
+      },
+      "MaidenName": "",
+      "IsClustered": 1,
+      "ExistsClusterId": "55530600",
       "RelatedFnameGroupId": null,
       "IsHasRelatedFname": false,
       "Ind": 0,
@@ -415,7 +946,7 @@
     },
     {
       "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
-      "BookId": "1000000",
+      "BookId": "30002030",
       "FirstName": {
         "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
         "Code": "T101216",
@@ -463,66 +994,7 @@
       },
       "MaidenName": "",
       "IsClustered": 1,
-      "ExistsClusterId": "12371059",
-      "RelatedFnameGroupId": null,
-      "IsHasRelatedFname": false,
-      "Ind": 0,
-      "HasRelatedGroups": false,
-      "Score": null,
-      "NumberOfSuggestions": 0,
-      "RelatedFnameList": null
-    },
-    {
-      "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
-      "BookId": "1000000",
-      "FirstName": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "T101216",
-        "Value": "Mintza"
-      },
-      "LastName": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "T77688 ",
-        "Value": "Mamiof"
-      },
-      "FatherFirstName": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "",
-        "Value": ""
-      },
-      "MotherFirstName": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "",
-        "Value": ""
-      },
-      "PlaceOfBirth": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "5533200",
-        "Value": "Resekne,Rezeknes,Latgale,Latvia"
-      },
-      "PermanentPlace": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "5533200",
-        "Value": "Resekne,Rezeknes,Latgale,Latvia"
-      },
-      "DateOfBirth": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "",
-        "Value": ""
-      },
-      "Source": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "T1196978",
-        "Value": "Page of Testimony"
-      },
-      "SpouseFirstName": {
-        "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
-        "Code": "",
-        "Value": ""
-      },
-      "MaidenName": "",
-      "IsClustered": 1,
-      "ExistsClusterId": "12371059",
+      "ExistsClusterId": "55530600",
       "RelatedFnameGroupId": null,
       "IsHasRelatedFname": false,
       "Ind": 0,

@@ -17,9 +17,14 @@ namespace Service.Services
             _repository = repository;
         }
 
-        public RootObject AddBookId(String bookId)
+        public RootObject AddBookId(string bookId)
         {
             return _repository.AddBookId(bookId);
+        }
+
+        public RootObject AddBookIdsByClusterId(string clusterId)
+        {
+            return _repository.AddBookIdsByClusterId(clusterId);
         }
     }
 }

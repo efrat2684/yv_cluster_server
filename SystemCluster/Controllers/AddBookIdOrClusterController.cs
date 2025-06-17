@@ -24,7 +24,7 @@ namespace SystemCluster.Controllers
         [Route("AddBookId")]
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public ActionResult<RootObject> AddBookId([FromBody]String bookId)
+        public ActionResult<RootObject> AddBookId([FromBody]string bookId)
         {
             try
             {
@@ -37,6 +37,20 @@ namespace SystemCluster.Controllers
             }
         }
 
-        
+        [Route("AddBookIdsByClusterId")]
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult<RootObject> AddBookIdsByClusterId([FromBody] string clusterId)
+        {
+            try
+            {
+                var result = _service.AddBookId(clusterId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
     }
 }

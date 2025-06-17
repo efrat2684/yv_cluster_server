@@ -45,5 +45,39 @@ namespace Data.Repositories
         }
 
 
+        public RootObject AddBookIdsByClusterId(string clusterId)
+        {
+            var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getByBookId.json");
+
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException("JSON file not found", filePath);
+
+            string jsonContent = File.ReadAllText(filePath);
+            var result = JsonSerializer.Deserialize<RootObject>(jsonContent, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            // חיפוש כל הרשומות המתאימות
+            var itemsToAdd = result?.d?.Where(row => row.ExistsClusterId == clusterId).ToList();
+
+            if (itemsToAdd != null && itemsToAdd.Count > 0)
+            {
+                foreach (var item in itemsToAdd)
+                {
+                    AddBookId(item.BookId);
+                }
+
+                // קריאה מחודשת לקובץ לאחר ההוספה
+                string updatedJson = File.ReadAllText(filePath);
+                result = JsonSerializer.Deserialize<RootObject>(updatedJson, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            }
+
+            return result;
+        }
+
     }
 }

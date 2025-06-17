@@ -3,5 +3,8 @@
     public interface IAddBookIdOrClusterService
     {
         RootObject AddBookId(string bookId);
+
+        RootObject AddBookIdsByClusterId(string clusterId);
+
     }
 }
