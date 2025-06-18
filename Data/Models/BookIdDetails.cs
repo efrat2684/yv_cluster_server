@@ -1,6 +1,5 @@
-public class ClusteredNameRow
+public class BookIdDetails
 {
-    public string __type { get; set; }
     public string BookId { get; set; }
     public ValueCodeItem FirstName { get; set; }
     public ValueCodeItem LastName { get; set; }

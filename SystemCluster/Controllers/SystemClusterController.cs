@@ -26,13 +26,16 @@ namespace SystemCluster.Controllers
         }
 
         //TableGroupIdDetailsComponent שליפת נתונים לקומפוננטת     
-        [Route("GetClusterGroupDetails")]
+        [Route("GetClusterGroupDetails/{groupId}")]
         [HttpGet]
-        public ActionResult<RootObjectOfClusterGroupDetails> GetClusterGroupDetails()
+        public ActionResult<ClusterGroupWithCrmLinks> GetClusterGroupDetails(int groupId)
         {
+            //if (string.IsNullOrEmpty(groupId))
+            //    return BadRequest("groupId is required");
             try
             {
-                var result = _service.GetClusterGroupDetails();
+              
+                var result = _service.GetClusterGroupDetails(groupId);
                 return Ok(result);
             }
             catch (Exception ex)

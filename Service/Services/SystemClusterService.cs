@@ -23,9 +23,9 @@ namespace Service.Services
             return _repository.GetMessage();
         }
 
-        public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
+        public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
-            return _repository.GetClusterGroupDetails();
+            return _repository.GetClusterGroupDetails(groupId);
         }
         public StatisticData GetStatisticData()
         {
