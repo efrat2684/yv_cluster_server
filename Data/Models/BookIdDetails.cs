@@ -1,3 +1,6 @@
+using static System.Formats.Asn1.AsnWriter;
+using System.Net;
+
 public class BookIdDetails
 {
     public string BookId { get; set; }
@@ -20,4 +23,48 @@ public class BookIdDetails
     public string Score { get; set; }
     public int NumberOfSuggestions { get; set; }
     public object RelatedFnameList { get; set; }
+
+    public BookIdDetails(
+        string bookId,
+        ValueCodeItem firstName,
+        ValueCodeItem lastName,
+        ValueCodeItem fatherFirstName,
+        ValueCodeItem motherFirstName,
+        ValueCodeItem placeOfBirth,
+        ValueCodeItem permanentPlace,
+        ValueCodeItem dateOfBirth,
+        ValueCodeItem source,
+        ValueCodeItem spouseFirstName,
+        string maidenName,
+        int isClustered,
+        string existsClusterId,
+        object relatedFnameGroupId,
+        bool isHasRelatedFname,
+        int ind,
+        bool hasRelatedGroups,
+        string score,
+        int numberOfSuggestions,
+        object relatedFnameList)
+    {
+        BookId = bookId;
+        FirstName = firstName;
+        LastName = lastName;
+        FatherFirstName = fatherFirstName;
+        MotherFirstName = motherFirstName;
+        PlaceOfBirth = placeOfBirth;
+        PermanentPlace = permanentPlace;
+        DateOfBirth = dateOfBirth;
+        Source = source;
+        SpouseFirstName = spouseFirstName;
+        MaidenName = maidenName;
+        IsClustered = isClustered;
+        ExistsClusterId = existsClusterId;
+        RelatedFnameGroupId = relatedFnameGroupId;
+        IsHasRelatedFname = isHasRelatedFname;
+        Ind = ind;
+        HasRelatedGroups = hasRelatedGroups;
+        Score = score;
+        NumberOfSuggestions = numberOfSuggestions;
+        RelatedFnameList = relatedFnameList;
+    }
 }
