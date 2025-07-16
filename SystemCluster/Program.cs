@@ -12,13 +12,12 @@ namespace SystemCluster
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // הוספת שירותי CORS
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
                     policy =>
                     {
-                        policy.WithOrigins("http://localhost:4200") // הכתובת של ה-frontend שלך
+                        policy.WithOrigins("http://localhost:60530") // הכתובת של ה-frontend שלך
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });
@@ -29,6 +28,11 @@ namespace SystemCluster
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ISystemClusterService, SystemClusterService>();
             builder.Services.AddScoped<ISystemClusterRepository, SystemClusterRepository>();
+            builder.Services.AddScoped<IAutoclusterService, AutoClusterService>();
+            builder.Services.AddScoped<IAutoClusterRepository, AutoClusterRepository>();
+            builder.Services.AddScoped<IConnectionFactory, SqlConnectionFactory>();
+
+
 
             var app = builder.Build();
 
@@ -38,7 +42,9 @@ namespace SystemCluster
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+           
 
+            app.UseCors("AllowAngularApp");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

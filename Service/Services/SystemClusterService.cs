@@ -17,7 +17,7 @@ namespace Service.Services
 
             _repository = repository;
      
-}
+        }
         public string GetMessageFromService()
         {
             return _repository.GetMessage();
