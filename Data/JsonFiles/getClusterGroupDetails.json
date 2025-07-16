@@ -1,52 +1,41 @@
 {
   "d": {
-    "__type": "ClusteredNamesSystem.classes.ClusterGroupWithCrmLinks",
-    "ClusteredNameRowList": [
+    "BookIdDetailsList": [
       {
-        "__type": "ClusteredNamesSystem.classes.ClusteredNameRow",
         "BookId": "15040243",
         "FirstName": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "T99981",
           "Value": "Yosef"
         },
         "LastName": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "T71100 ",
           "Value": "Weiss"
         },
         "FatherFirstName": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "T99807",
           "Value": "Yehuda"
         },
         "MotherFirstName": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "T99403",
           "Value": "Chana"
         },
         "PlaceOfBirth": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "5706532",
           "Value": "\u003c\u003e,\u003c\u003e,\u003c\u003e,Czechoslovakia"
         },
         "PermanentPlace": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "5555232",
           "Value": "Vishna Vizniza,Mukacevo,Carpathian Ruthenia,Czechoslovakia"
         },
         "DateOfBirth": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "",
           "Value": ""
         },
         "Source": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "T1196978",
           "Value": "Page of Testimony"
         },
         "SpouseFirstName": {
-          "__type": "ClusteredNamesSystem.classes.ValueCodeItem",
           "Code": "",
           "Value": ""
         },
@@ -113,7 +102,7 @@
         "IsClustered": 0,
         "ExistsClusterId": "",
         "RelatedFnameGroupId": null,
-        "IsHasRelatedFname": false,
+        "RelatedFnameGroupId": false,
         "Ind": 129381,
         "HasRelatedGroups": false,
         "Score": "0",

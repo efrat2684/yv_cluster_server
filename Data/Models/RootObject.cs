@@ -1,4 +1,4 @@
 public class RootObject
 {
-    public List<ClusteredNameRow> d { get; set; }
+    public List<BookIdDetails> d { get; set; }
 }

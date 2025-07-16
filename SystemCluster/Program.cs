@@ -3,6 +3,7 @@ using Data.Repositories.Interfaces;
 using Data.Repositories;
 using Service.Services.Interfaces;
 using Service.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace SystemCluster
 {
@@ -10,6 +11,7 @@ namespace SystemCluster
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddCors(options =>
@@ -28,6 +30,13 @@ namespace SystemCluster
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ISystemClusterService, SystemClusterService>();
             builder.Services.AddScoped<ISystemClusterRepository, SystemClusterRepository>();
+            builder.Services.AddScoped<ICreateClusterService, CreateClusterService>();
+            builder.Services.AddScoped<ICreateClusterRepository, CreateClusterRepository>();
+            builder.Services.AddScoped<IAddBookIdOrClusterRepository, AddBookIdOrClusterRepository>();
+            builder.Services.AddScoped<IAddBookIdOrClusterService, AddBookIdOrClusterService>();
+
+
+
             builder.Services.AddScoped<IAutoclusterService, AutoClusterService>();
             builder.Services.AddScoped<IAutoClusterRepository, AutoClusterRepository>();
             builder.Services.AddScoped<IConnectionFactory, SqlConnectionFactory>();

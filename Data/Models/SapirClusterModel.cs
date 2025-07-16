@@ -5,7 +5,7 @@ public class SapirClusterModel
     public string Comments { get; set; }
     public bool GroupHasMultimedia { get; set; }   
     public string Level { get; set; }
-
-    public string GroupId { get; set; }
+    public bool GroupHasMultimedia { get; set; }
+    public string? GroupId { get; set; }
     public int StatusCode { get; set; }
 }
