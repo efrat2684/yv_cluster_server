@@ -19,20 +19,20 @@ namespace SystemCluster.Controllers
 
 
         // GET: CreateClusterController
-        [Route("GetCreateClusterData")]
-        [HttpGet]
-        public ActionResult<SapirClusterModel> GetCreateClusterData()
-        {
-            try
-            {
-                var result = _service.GetCreateClusterData();
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error: {ex.Message}");
-            }
-        }
+        //[Route("GetCreateClusterData")]
+        //[HttpGet]
+        //public ActionResult<SapirClusterModel> GetCreateClusterData()
+        //{
+        //    try
+        //    {
+        //        var result = _service.GetCreateClusterData();
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Error: {ex.Message}");
+        //    }
+        //}
 
 
 

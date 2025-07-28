@@ -8,10 +8,14 @@ namespace Service.Services.Interfaces
 {
     public interface ISystemClusterService
     {
-        string GetMessageFromService();
-        RootObjectOfClusterGroupDetails GetClusterGroupDetails();
+        ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId);
         StatisticData GetStatisticData();
 
+        BookIdDetails AddBookId(string bookId);
+
+        List<BookIdDetails> AddBookIdsByClusterId(string clusterId);
+
+        List<BookIdDetails> GetCreateClusterData(List<string> bookIds);
 
     }
 }

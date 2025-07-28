@@ -30,221 +30,105 @@ namespace Data.Repositories
 
         private string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
 
-        public string GetMessage()
+
+
+        public BookIdDetails createNewBookIdDetails(DataRow row)
         {
-            List<TestModel> _data;
-
-            // בניית הנתיב לקובץ Test.json
-            var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "Test.json");
-
-            if (!File.Exists(filePath))
+            BookIdDetails bookIdDetailsObject = new BookIdDetails
             {
-                throw new FileNotFoundException($"קובץ JSON לא נמצא בנתיב: {filePath}");
-            }
-
-            // קריאה של תוכן הקובץ כטקסט
-            var jsonString = File.ReadAllText(filePath);
-
-            // פענוח התוכן לרשימה של TestModel
-            _data = JsonSerializer.Deserialize<List<TestModel>>(jsonString) ?? new List<TestModel>();
-            return _data.FirstOrDefault()?.message ?? "אין נתונים";
+                //__type = "YourNamespace.ClusteredNameRow", // אפשר לשנות לפי הצורך
+                BookId = row["BookId"] == DBNull.Value ? "" : row["BookId"].ToString().Trim(),
+                FirstName = new ValueCodeItem
+                {
+                    Value = row["FirstName"] == DBNull.Value ? "" : row["FirstName"].ToString().Trim(),
+                    Code = row["FirstNameCode"] == DBNull.Value ? null : row["FirstNameCode"].ToString().Trim()
+                },
+                LastName = new ValueCodeItem
+                {
+                    Value = row["LastName"] == DBNull.Value ? "" : row["LastName"].ToString().Trim(),
+                    Code = row["LastNameCode"] == DBNull.Value ? null : row["LastNameCode"].ToString().Trim()
+                },
+                FatherFirstName = new ValueCodeItem
+                {
+                    Value = row["FatherName"] == DBNull.Value ? "" : row["FatherName"].ToString().Trim(),
+                    Code = row["FatherNameCode"] == DBNull.Value ? null : row["FatherNameCode"].ToString().Trim()
+                },
+                MotherFirstName = new ValueCodeItem
+                {
+                    Value = row["MotherName"] == DBNull.Value ? "" : row["MotherName"].ToString().Trim(),
+                    Code = row["MotherNameCode"] == DBNull.Value ? null : row["MotherNameCode"].ToString().Trim()
+                },
+                SpouseFirstName = new ValueCodeItem
+                {
+                    Value = row["SpouseFirstName"] == DBNull.Value ? "" : row["SpouseFirstName"].ToString().Trim(),
+                    Code = row["SpouseFirstNameCode"] == DBNull.Value ? null : row["SpouseFirstNameCode"].ToString().Trim()
+                },
+                DateOfBirth = new ValueCodeItem
+                {
+                    Value = row["DateOfBirth"] == DBNull.Value ? "" : row["DateOfBirth"].ToString().Trim(),
+                    Code = row["DateOfBirthCode"] == DBNull.Value ? null : row["DateOfBirthCode"].ToString().Trim()
+                },
+                PlaceOfBirth = new ValueCodeItem
+                {
+                    Value = row["PlaceOfBirth"] == DBNull.Value ? "" : row["PlaceOfBirth"].ToString().Trim(),
+                    Code = row["PlaceOfBirthCode"] == DBNull.Value ? null : row["PlaceOfBirthCode"].ToString().Trim()
+                },
+                PermanentPlace = new ValueCodeItem
+                {
+                    Value = row["PermanentPlace"] == DBNull.Value ? "" : row["PermanentPlace"].ToString().Trim(),
+                    Code = row["PermanentPlaceCode"] == DBNull.Value ? null : row["PermanentPlaceCode"].ToString().Trim()
+                },
+                Source = new ValueCodeItem
+                {
+                    Value = row["Source"] == DBNull.Value ? "" : row["Source"].ToString().Trim(),
+                    Code = row["SourceCode"] == DBNull.Value ? "" : row["SourceCode"].ToString().Trim()
+                },
+                MaidenName = row["MaidenName"] == DBNull.Value ? "" : row["MaidenName"].ToString().Trim(),
+                IsClustered = row["IsClustered"] == DBNull.Value ? 0 : Convert.ToInt32(row["IsClustered"]),
+                ExistsClusterId = row["ExistsClusterId"] == DBNull.Value ? "" : row["ExistsClusterId"].ToString().Trim(),
+                RelatedFnameGroupId = row["RelatedFnameGroupId"] == DBNull.Value ? null : row["RelatedFnameGroupId"],
+                IsHasRelatedFname = row["RelatedFnameList"] == DBNull.Value ? false : Convert.ToBoolean(row["RelatedFnameList"]),
+                Ind = row["Ind"] == DBNull.Value ? 0 : Convert.ToInt32(row["Ind"]),
+                HasRelatedGroups = row["HasRelatedGroups"] == DBNull.Value ? false : Convert.ToBoolean(row["HasRelatedGroups"]),
+                NumberOfSuggestions = row["NumberOfSuggestions"] == DBNull.Value ? 0 : Convert.ToInt32(row["NumberOfSuggestions"]),
+                RelatedFnameList = row["RelatedFnameList"] == DBNull.Value ? null : row["RelatedFnameList"],
+                //Score = row["Score"] == DBNull.Value ? "" : row["Score"].ToString().Trim()
+            };
+            return bookIdDetailsObject;
         }
-
-
-        //public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
-        //{
-
-        //    var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getClusterGroupDetails.json");
-
-        //    if (!File.Exists(filePath))
-        //        throw new FileNotFoundException("JSON file not found", filePath);
-
-        //    string jsonContent = File.ReadAllText(filePath);
-        //    var result = JsonSerializer.Deserialize<RootObjectOfClusterGroupDetails>(jsonContent, new JsonSerializerOptions
-        //    {
-        //        PropertyNameCaseInsensitive = true
-        //    });
-
-        //    return result;
-        //}
-        //public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
-        //{
-        //    var result = new RootObjectOfClusterGroupDetails
-        //    {
-        //        d = new ClusterGroupWithCrmLinks
-        //        {
-        //            ClusteredNameRowList = _context.NamesData
-        //                .Select(n => new ClusteredNameRow
-        //                {
-        //                    BookId = n.BookId,
-        //                    FirstName = new ValueCodeItem
-        //                    {
-        //                        Value = n.FirstName.Value,
-        //                        Code = n.FirstName.Code
-        //                    },
-        //                    LastName = new ValueCodeItem
-        //                    {
-        //                        Value = n.LastName.Value,
-        //                        Code = n.LastName.Code
-        //                    },
-        //                    FatherFirstName = new ValueCodeItem
-        //                    {
-        //                        Value = n.FatherFirstName.Value,
-        //                        Code = n.FatherFirstName.Code
-        //                    },
-        //                    MotherFirstName = new ValueCodeItem
-        //                    {
-        //                        Value = n.MotherFirstName.Value,
-        //                        Code = n.MotherFirstName.Code
-        //                    },
-        //                    PlaceOfBirth = new ValueCodeItem
-        //                    {
-        //                        Value = n.PlaceOfBirth.Value,
-        //                        Code = n.PlaceOfBirth.Code
-        //                    },
-        //                    PermanentPlace = new ValueCodeItem
-        //                    {
-        //                        Value = n.PermanentPlace.Value,
-        //                        Code = n.PermanentPlace.Code
-        //                    },
-        //                    DateOfBirth = new ValueCodeItem
-        //                    {
-        //                        Value = n.DateOfBirth.Value,
-        //                        Code = n.DateOfBirth.Code
-        //                    },
-        //                    Source = new ValueCodeItem
-        //                    {
-        //                        Value = n.Source.Value,
-        //                        Code = n.Source.Code
-        //                    },
-        //                    SpouseFirstName = new ValueCodeItem
-        //                    {
-        //                        Value = n.SpouseFirstName.Value,
-        //                        Code = n.SpouseFirstName.Code
-        //                    },
-        //                    MaidenName = n.MaidenName,
-        //                    IsClustered = n.IsClustered,
-        //                    ExistsClusterId = n.ExistsClusterId,
-        //                    RelatedFnameGroupId = n.RelatedFnameGroupId,
-        //                    IsHasRelatedFname = n.IsHasRelatedFname,
-        //                    Ind = n.Ind,
-        //                    HasRelatedGroups = n.HasRelatedGroups,
-        //                    Score = n.Score,
-        //                    NumberOfSuggestions = n.NumberOfSuggestions,
-        //                    RelatedFnameList = null // אם יש צורך לאכלס, אפשר להוסיף לוגיקה כאן
-        //                })
-        //                .ToList()
-        //        }
-        //    };
-
-        //    return result;
-        //}
-
-
-        public RootObjectOfClusterGroupDetails GetClusterGroupDetails()
+        public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
+            string query = "select * from namesData n join groups g on n.bookId = g.bookId where g.groupId = @groupId";
             DataTable dt = new DataTable();
-            RootObjectOfClusterGroupDetails result = new RootObjectOfClusterGroupDetails();
-            List<ClusteredNameRowEzer> allRows = new List<ClusteredNameRowEzer>();
+            ClusterGroupWithCrmLinks result = new ClusterGroupWithCrmLinks();
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                using (SqlDataAdapter da = new SqlDataAdapter("select * from namesData n\r\njoin groups g on n.bookId=g.bookId", connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(query, connection))
                 {
+                    da.SelectCommand.Parameters.AddWithValue("@groupId", groupId);
                     try
                     {
                         connection.Open();
                         da.Fill(dt);
-                        List<ClusteredNameRow> clusteredNameRows = new List<ClusteredNameRow>();
+                        List<BookIdDetails> clusteredNameRows = new List<BookIdDetails>();
 
                         for (int i = 0; i < dt.Rows.Count; i++)
                         {
                             DataRow row = dt.Rows[i];
 
-                            ClusteredNameRow item = new ClusteredNameRow
-                            {
-                                //__type = "YourNamespace.ClusteredNameRow", // אפשר לשנות לפי הצורך
-                                BookId = row["BookId"] == DBNull.Value ? "" : row["BookId"].ToString().Trim(),
-                                FirstName = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["FirstName"] == DBNull.Value ? "" : row["FirstName"].ToString().Trim(),
-                                    Code = row["FirstNameCode"] == DBNull.Value ? "" : row["FirstNameCode"].ToString().Trim()
-                                },
-                                LastName = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["LastName"] == DBNull.Value ? "" : row["LastName"].ToString().Trim(),
-                                    Code = row["LastNameCode"] == DBNull.Value ? "" : row["LastNameCode"].ToString().Trim()
-                                },
-                                FatherFirstName = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["FatherName"] == DBNull.Value ? "" : row["FatherName"].ToString().Trim(),
-                                    Code = row["FatherNameCode"] == DBNull.Value ? "" : row["FatherNameCode"].ToString().Trim()
-                                },
-                                MotherFirstName = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["MotherName"] == DBNull.Value ? "" : row["MotherName"].ToString().Trim(),
-                                    Code = row["MotherNameCode"] == DBNull.Value ? "" : row["MotherNameCode"].ToString().Trim()
-                                },
-                                SpouseFirstName = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["SpouseFirstName"] == DBNull.Value ? "" : row["SpouseFirstName"].ToString().Trim(),
-                                    Code = row["SpouseFirstNameCode"] == DBNull.Value ? "" : row["SpouseFirstNameCode"].ToString().Trim()
-                                },
-                                DateOfBirth = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["DateOfBirth"] == DBNull.Value ? "" : row["DateOfBirth"].ToString().Trim(),
-                                    Code = row["DateOfBirthCode"] == DBNull.Value ? "" : row["DateOfBirthCode"].ToString().Trim()
-                                },
-                                PlaceOfBirth = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["PlaceOfBirth"] == DBNull.Value ? "" : row["PlaceOfBirth"].ToString().Trim(),
-                                    Code = row["PlaceOfBirthCode"] == DBNull.Value ? "" : row["PlaceOfBirthCode"].ToString().Trim()
-                                },
-                                PermanentPlace = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["PermanentPlace"] == DBNull.Value ? "" : row["PermanentPlace"].ToString().Trim(),
-                                    Code = row["PermanentPlaceCode"] == DBNull.Value ? "" : row["PermanentPlaceCode"].ToString().Trim()
-                                },
-                                Source = new ValueCodeItem
-                                {
-                                    __type = "YourNamespace.ValueCodeItem",
-                                    Value = row["Source"] == DBNull.Value ? "" : row["Source"].ToString().Trim(),
-                                    Code = row["SourceCode"] == DBNull.Value ? "" : row["SourceCode"].ToString().Trim()
-                                },
-                                MaidenName = row["MaidenName"] == DBNull.Value ? "" : row["MaidenName"].ToString().Trim(),
-                                IsClustered = row["IsClustered"] == DBNull.Value ? 0 : Convert.ToInt32(row["IsClustered"]),
-                                ExistsClusterId = row["ExistsClusterId"] == DBNull.Value ? "" : row["ExistsClusterId"].ToString().Trim(),
-                                RelatedFnameGroupId = row["RelatedFnameGroupId"] == DBNull.Value ? null : row["RelatedFnameGroupId"],
-                                IsHasRelatedFname = row["RelatedFnameList"] == DBNull.Value ? false : Convert.ToBoolean(row["RelatedFnameList"]),
-                                Ind = row["Ind"] == DBNull.Value ? 0 : Convert.ToInt32(row["Ind"]),
-                                HasRelatedGroups = row["HasRelatedGroups"] == DBNull.Value ? false : Convert.ToBoolean(row["HasRelatedGroups"]),
-                                NumberOfSuggestions = row["NumberOfSuggestions"] == DBNull.Value ? 0 : Convert.ToInt32(row["NumberOfSuggestions"]),
-                                RelatedFnameList = row["RelatedFnameList"] == DBNull.Value ? null : row["RelatedFnameList"],
-                                Score = row["Score"] == DBNull.Value ? "" : row["Score"].ToString().Trim(),
-                            };
+                            BookIdDetails item = createNewBookIdDetails(row);
+                            item.Score = row["Score"] == DBNull.Value ? "" : row["Score"].ToString().Trim();
 
                             clusteredNameRows.Add(item);
                         }
 
                         // הרכבת האובייקט הסופי:
-                        result = new RootObjectOfClusterGroupDetails
+                        result = new ClusterGroupWithCrmLinks
                         {
-                            d = new ClusterGroupWithCrmLinks
-                            {
-                                __type = "YourNamespace.ClusterGroupWithCrmLinks",
-                                ClusteredNameRowList = clusteredNameRows,
-                                CrmLinkList = new List<object>(), // אם יש נתונים – תוכל להוסיף
-                                contact = null // או שים אובייקט מתאים אם יש
-                            }
+                            BookIdDetailsList = clusteredNameRows,
+                            CrmLinkList = new List<object>(), // אם יש נתונים – תוכל להוסיף
+                            Contact = null // או שים אובייקט מתאים אם יש
                         };
-
                     }
                     catch (Exception ex)
                     {
@@ -274,6 +158,141 @@ namespace Data.Repositories
         }
 
 
+        public BookIdDetails AddBookId(string bookId)
+        {
+            string query = "select * from namesData where BookId = @BookId";
+            DataTable dt = new DataTable();
 
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(query, connection))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@BookId", bookId);
+                    try
+                    {
+                        connection.Open();
+                        da.Fill(dt);
+
+                        if (dt.Rows.Count == 0)
+                            return null;
+
+                        DataRow row = dt.Rows[0];
+
+                        BookIdDetails item = createNewBookIdDetails(row);
+                        return item;
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                }
+            }
+        }
+        public List<BookIdDetails> AddBookIdsByClusterId(string clusterId)
+        {
+            string query = "select * from namesData where ExistsClusterId = @ClusterId";
+            DataTable dt = new DataTable();
+            var results = new List<BookIdDetails>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(query, connection))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@ClusterId", clusterId);
+                    try
+                    {
+                        connection.Open();
+                        da.Fill(dt);
+
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            DataRow row = dt.Rows[i];
+
+                            BookIdDetails item = createNewBookIdDetails(row);
+                            results.Add(item);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                }
+            }
+
+            return results;
+        }
+
+
+        public List<BookIdDetails> GetCreateClusterData(List<string> bookIds)
+        {
+            var results = new List<BookIdDetails>();
+            if (bookIds == null || bookIds.Count == 0)
+                return results;
+
+            var parameters = string.Join(", ", bookIds.Select((id, i) => $"@id{i}"));
+            string query = $"select * from namesData where BookId IN ({parameters})";
+            DataTable dt = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    for (int i = 0; i < bookIds.Count; i++)
+                        command.Parameters.AddWithValue($"@id{i}", bookIds[i]);
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(command))
+                    {
+                        connection.Open();
+                        da.Fill(dt);
+
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            DataRow row = dt.Rows[i];
+                            BookIdDetails item = createNewBookIdDetails(row);
+
+                            // מיפוי שדות נוספים שלא קיימים ב-createNewBookIdDetails
+                            //item.ClusterId = row.Table.Columns.Contains("ClusterId") && row["ClusterId"] != DBNull.Value ? row["ClusterId"].ToString().Trim() : null;
+                            item.PlaceOfDeath = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("PlaceOfDeath") && row["PlaceOfDeath"] != DBNull.Value ? row["PlaceOfDeath"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("PlaceOfDeathCode") && row["PlaceOfDeathCode"] != DBNull.Value ? row["PlaceOfDeathCode"].ToString().Trim() : null
+                            };
+                            item.AuthenticDateOfBirth = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("AuthenticDateOfBirth") && row["AuthenticDateOfBirth"] != DBNull.Value ? row["AuthenticDateOfBirth"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("AuthenticDateOfBirthCode") && row["AuthenticDateOfBirthCode"] != DBNull.Value ? row["AuthenticDateOfBirthCode"].ToString().Trim() : null
+                            };
+                            item.RestoredDateOfBirth = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("RestoredDateOfBirth") && row["RestoredDateOfBirth"] != DBNull.Value ? row["RestoredDateOfBirth"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("RestoredDateOfBirthCode") && row["RestoredDateOfBirthCode"] != DBNull.Value ? row["RestoredDateOfBirthCode"].ToString().Trim() : null
+                            };
+                            item.AuthenticDateOfDeath = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("AuthenticDateOfDeath") && row["AuthenticDateOfDeath"] != DBNull.Value ? row["AuthenticDateOfDeath"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("AuthenticDateOfDeathCode") && row["AuthenticDateOfDeathCode"] != DBNull.Value ? row["AuthenticDateOfDeathCode"].ToString().Trim() : null
+                            };
+                            item.RestoredDateOfDeath = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("RestoredDateOfDeath") && row["RestoredDateOfDeath"] != DBNull.Value ? row["RestoredDateOfDeath"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("RestoredDateOfDeathCode") && row["RestoredDateOfDeathCode"] != DBNull.Value ? row["RestoredDateOfDeathCode"].ToString().Trim() : null
+                            };
+                            item.Gender = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("Gender") && row["Gender"] != DBNull.Value ? row["Gender"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("GenderCode") && row["GenderCode"] != DBNull.Value ? row["GenderCode"].ToString().Trim() : null
+                            };
+                            item.Fate = new ValueCodeItem
+                            {
+                                Value = row.Table.Columns.Contains("Fate") && row["Fate"] != DBNull.Value ? row["Fate"].ToString().Trim() : "",
+                                Code = row.Table.Columns.Contains("FateCode") && row["FateCode"] != DBNull.Value ? row["FateCode"].ToString().Trim() : null
+                            };
+                            results.Add(item);
+                        }
+                    }
+                }
+            }
+            return results;
+        }
     }
 }
