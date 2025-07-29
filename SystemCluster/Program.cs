@@ -3,7 +3,6 @@ using Data.Repositories.Interfaces;
 using Data.Repositories;
 using Service.Services.Interfaces;
 using Service.Services;
-using Data.context;
 using Microsoft.EntityFrameworkCore;
 
 namespace SystemCluster
@@ -15,7 +14,6 @@ namespace SystemCluster
 
             var builder = WebApplication.CreateBuilder(args);
 
-            // הוספת שירותי CORS
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend",
@@ -37,9 +35,11 @@ namespace SystemCluster
 
 
 
+            builder.Services.AddScoped<IAutoclusterService, AutoClusterService>();
+            builder.Services.AddScoped<IAutoClusterRepository, AutoClusterRepository>();
+            builder.Services.AddScoped<IConnectionFactory, SqlConnectionFactory>();
 
-            builder.Services.AddDbContext<SystemClusterDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SystemClusterDb")));
+
 
             ////builder.Services.AddCors(options =>
             ////{
@@ -60,8 +60,13 @@ namespace SystemCluster
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+<<<<<<< HEAD
             //app.UseCors();
+=======
+           
+>>>>>>> origin/main
 
+            app.UseCors("AllowAngularApp");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

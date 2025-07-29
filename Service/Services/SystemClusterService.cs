@@ -17,9 +17,20 @@ namespace Service.Services
 
             _repository = repository;
      
+<<<<<<< HEAD
 }
         public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
+=======
+        }
+        public string GetMessageFromService()
+        {
+            return _repository.GetMessage();
+        }
+
+        public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
+        {
+>>>>>>> origin/main
             return _repository.GetClusterGroupDetails(groupId);
         }
         public StatisticData GetStatisticData()

@@ -26,7 +26,11 @@ namespace SystemCluster.Controllers
             //    return BadRequest("groupId is required");
             try
             {
+<<<<<<< HEAD
 
+=======
+              
+>>>>>>> origin/main
                 var result = _service.GetClusterGroupDetails(groupId);
                 return Ok(result);
             }
@@ -52,6 +56,7 @@ namespace SystemCluster.Controllers
         }
 
 
+<<<<<<< HEAD
         // POST: EnterBookIdOrClusterController/Create
         [Route("AddBookId")]
         [HttpGet]
@@ -115,5 +120,7 @@ namespace SystemCluster.Controllers
                 return StatusCode(500, $"Error: {ex.Message}");
             }
         }
+=======
+>>>>>>> origin/main
     }
 }
