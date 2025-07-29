@@ -19,7 +19,7 @@ namespace SystemCluster
                 options.AddPolicy("AllowFrontend",
                     policy =>
                     {
-                        policy.WithOrigins("http://localhost:60530") // הכתובת של ה-frontend שלך
+                        policy.WithOrigins("http://localhost:4200") // הכתובת של ה-frontend שלך
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });
