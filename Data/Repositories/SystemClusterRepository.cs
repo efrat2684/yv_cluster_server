@@ -222,6 +222,34 @@ namespace Data.Repositories
             return results;
         }
 
+        public void AddNewBookIdToExistCluster(string[] bookIds, string clusterId)
+        {
+            string insertQuery = "INSERT INTO newClusterFromSystem (BookId, ClusterId, CreateDate) VALUES (@BookId, @ClusterId, @CreateDate)";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    foreach (string bookId in bookIds)
+                    {
+                        using (SqlDataAdapter insertAdapter = new SqlDataAdapter())
+                        {
+                            insertAdapter.InsertCommand = new SqlCommand(insertQuery, connection);
+                            insertAdapter.InsertCommand.Parameters.AddWithValue("@BookId", bookId);
+                            insertAdapter.InsertCommand.Parameters.AddWithValue("@ClusterId", clusterId);
+                            insertAdapter.InsertCommand.Parameters.AddWithValue("@CreateDate", DateTime.Now);
+                            insertAdapter.InsertCommand.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
 
         public List<BookIdDetails> GetCreateClusterData(List<string> bookIds)
         {

@@ -15,6 +15,7 @@ namespace Service.Services.Interfaces
 
         List<BookIdDetails> AddBookIdsByClusterId(string clusterId);
 
+        void AddNewBookIdToExistCluster(string[] bookIds, string clusterId);
         List<BookIdDetails> GetCreateClusterData(List<string> bookIds);
 
     }

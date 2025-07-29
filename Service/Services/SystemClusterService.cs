@@ -40,7 +40,10 @@ namespace Service.Services
             return _repository.AddBookIdsByClusterId(clusterId);
         }
 
-
+        public void AddNewBookIdToExistCluster(string[] bookIds, string clusterId)
+        {
+            _repository.AddNewBookIdToExistCluster(bookIds, clusterId);
+        }
         public List<BookIdDetails> GetCreateClusterData(List<string> bookIds)
         {
             return _repository.GetCreateClusterData(bookIds);

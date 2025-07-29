@@ -85,6 +85,21 @@ namespace SystemCluster.Controllers
             }
         }
 
+        [HttpPost("AddNewBookIdToExistCluster")]
+        [HttpPost]
+        public IActionResult AddNewBookIdToExistCluster([FromBody] string[] bookIds, [FromQuery] string clusterId)
+        {
+            try
+            {
+                _service.AddNewBookIdToExistCluster(bookIds,clusterId);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
 
         [Route("GetCreateClusterData")]
         [HttpGet]

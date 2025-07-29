@@ -14,6 +14,8 @@ namespace Data.Repositories.Interfaces
         BookIdDetails AddBookId(string bookId);
 
         List<BookIdDetails> AddBookIdsByClusterId(string clusterId);
+
+        void AddNewBookIdToExistCluster(string[] bookIds, string clusterId);
         List<BookIdDetails> GetCreateClusterData(List<string> bookIds);
 
 

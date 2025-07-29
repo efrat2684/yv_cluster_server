@@ -41,6 +41,17 @@ namespace SystemCluster
             builder.Services.AddDbContext<SystemClusterDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SystemClusterDb")));
 
+            ////builder.Services.AddCors(options =>
+            ////{
+            ////    options.AddDefaultPolicy(policy =>
+            ////    {
+            ////        policy.WithOrigins("http://localhost:52748")
+            ////              .AllowAnyHeader()
+            ////              .AllowAnyMethod();
+            ////    });
+            ////});
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -49,6 +60,7 @@ namespace SystemCluster
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            //app.UseCors();
 
             app.UseHttpsRedirection();
 
