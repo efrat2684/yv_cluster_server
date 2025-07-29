@@ -12,33 +12,22 @@ namespace Service.Services
     public class SystemClusterService: ISystemClusterService
     {
         private readonly ISystemClusterRepository _repository;
-        public SystemClusterService(ISystemClusterRepository repository) 
+        public SystemClusterService(ISystemClusterRepository repository)
         {
 
             _repository = repository;
-     
-<<<<<<< HEAD
-}
-        public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
-        {
-=======
-        }
-        public string GetMessageFromService()
-        {
-            return _repository.GetMessage();
+
         }
 
         public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
->>>>>>> origin/main
+
             return _repository.GetClusterGroupDetails(groupId);
         }
         public StatisticData GetStatisticData()
         {
             return _repository.GetStatisticData();
         }
-
-
 
 
         public BookIdDetails AddBookId(string bookId)

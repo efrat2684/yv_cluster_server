@@ -41,15 +41,6 @@ namespace SystemCluster
 
 
 
-            ////builder.Services.AddCors(options =>
-            ////{
-            ////    options.AddDefaultPolicy(policy =>
-            ////    {
-            ////        policy.WithOrigins("http://localhost:52748")
-            ////              .AllowAnyHeader()
-            ////              .AllowAnyMethod();
-            ////    });
-            ////});
 
 
             var app = builder.Build();
@@ -60,11 +51,7 @@ namespace SystemCluster
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-<<<<<<< HEAD
-            //app.UseCors();
-=======
-           
->>>>>>> origin/main
+
 
             app.UseCors("AllowAngularApp");
             app.UseHttpsRedirection();
