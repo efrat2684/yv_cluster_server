@@ -19,10 +19,10 @@ namespace Service.Services
 
 
 
-        public SapirClusterModel GetCreateClusterData()
-        {
-            return _repository.GetCreateClusterData();
-        }
+        //public SapirClusterModel GetCreateClusterData()
+        //{
+        //    return _repository.GetCreateClusterData();
+        //}
 
         public SapirClusterModel CreateNewCluster(SapirClusterModel sapirClusterModel)
         {

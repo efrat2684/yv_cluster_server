@@ -1,7 +1,7 @@
 public class SapirClusterModel
 {
-    public List<string> BookIdList { get; set; }
-    public List<SapirClusterDetail> SapirClusterDetails { get; set; }
+    public List<BookIdDetails> BookIdList { get; set; }
+    //public List<SapirClusterDetail> SapirClusterDetails { get; set; }
     public string Comments { get; set; }
     public string Level { get; set; }
     public bool GroupHasMultimedia { get; set; }

@@ -33,8 +33,6 @@ namespace SystemCluster
             builder.Services.AddScoped<ISystemClusterRepository, SystemClusterRepository>();
             builder.Services.AddScoped<ICreateClusterService, CreateClusterService>();
             builder.Services.AddScoped<ICreateClusterRepository, CreateClusterRepository>();
-            builder.Services.AddScoped<IAddBookIdOrClusterRepository, AddBookIdOrClusterRepository>();
-            builder.Services.AddScoped<IAddBookIdOrClusterService, AddBookIdOrClusterService>();
 
 
 

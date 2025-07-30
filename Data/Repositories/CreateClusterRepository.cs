@@ -1,5 +1,6 @@
 ﻿using Data.Models;
 using Data.Repositories.Interfaces;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,23 +14,29 @@ namespace Data.Repositories
     {
         private string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\.."));
 
+        private readonly string _connectionString;
 
-        public SapirClusterModel GetCreateClusterData()
+        public CreateClusterRepository(IConfiguration configuration)
         {
-
-            var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getCreateClusterData.json");
-
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException("JSON file not found", filePath);
-
-            string jsonContent = File.ReadAllText(filePath);
-            var result = JsonSerializer.Deserialize<SapirClusterModel>(jsonContent, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
-
-            return result;
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            Console.WriteLine(_connectionString);
         }
+        //public SapirClusterModel GetCreateClusterData()
+        //{
+
+        //    var filePath = Path.Combine(projectRoot, "Data", "JsonFiles", "getCreateClusterData.json");
+
+        //    if (!File.Exists(filePath))
+        //        throw new FileNotFoundException("JSON file not found", filePath);
+
+        //    string jsonContent = File.ReadAllText(filePath);
+        //    var result = JsonSerializer.Deserialize<SapirClusterModel>(jsonContent, new JsonSerializerOptions
+        //    {
+        //        PropertyNameCaseInsensitive = true
+        //    });
+
+        //    return result;
+        //}
 
         public SapirClusterModel CreateNewCluster(SapirClusterModel sapirClusterModel)
         {

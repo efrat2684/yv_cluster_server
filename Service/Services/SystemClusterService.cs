@@ -18,18 +18,38 @@ namespace Service.Services
             _repository = repository;
      
 }
-        public string GetMessageFromService()
-        {
-            return _repository.GetMessage();
-        }
+        //public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
+        //{
+        //    return _repository.GetMessage();
+        //}
 
         public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
+
             return _repository.GetClusterGroupDetails(groupId);
         }
         public StatisticData GetStatisticData()
         {
             return _repository.GetStatisticData();
+        }
+
+
+
+
+        public BookIdDetails AddBookId(string bookId)
+        {
+            return _repository.AddBookId(bookId);
+        }
+
+        public List<BookIdDetails> AddBookIdsByClusterId(string clusterId)
+        {
+            return _repository.AddBookIdsByClusterId(clusterId);
+        }
+
+
+        public List<BookIdDetails> GetCreateClusterData(List<string> bookIds)
+        {
+            return _repository.GetCreateClusterData(bookIds);
         }
     }
 }

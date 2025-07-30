@@ -2,7 +2,7 @@
 {
     public interface ICreateClusterRepository
     {
-        SapirClusterModel GetCreateClusterData();
+        //SapirClusterModel GetCreateClusterData();
 
         SapirClusterModel CreateNewCluster(SapirClusterModel sapirClusterModel);
     }

@@ -9,20 +9,12 @@ namespace SystemCluster.Controllers
     [Route("api/[controller]")]
     public class SystemClusterController : Controller
     {
-       
+
         private readonly ISystemClusterService _service;
 
         public SystemClusterController(ISystemClusterService service)
         {
             _service = service;
-        }
-        //JSON פונקצית נסיון לשליפת הודעה מתוך קובץ 
-        [Route("test")]
-        [HttpGet]
-        public IActionResult GetWeather()
-        {
-            var msg = _service.GetMessageFromService();
-            return Ok(new { message = msg });
         }
 
         //TableGroupIdDetailsComponent שליפת נתונים לקומפוננטת     
@@ -34,7 +26,6 @@ namespace SystemCluster.Controllers
             //    return BadRequest("groupId is required");
             try
             {
-              
                 var result = _service.GetClusterGroupDetails(groupId);
                 return Ok(result);
             }
@@ -51,6 +42,59 @@ namespace SystemCluster.Controllers
             try
             {
                 var result = _service.GetStatisticData();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+
+
+        // POST: EnterBookIdOrClusterController/Create
+        [Route("AddBookId")]
+        [HttpGet]
+        //[ValidateAntiForgeryToken]
+        public ActionResult<BookIdDetails> AddBookId(string bookId)
+        {
+            try
+            {
+                var result = _service.AddBookId(bookId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+
+        [Route("AddBookIdsByClusterId")]
+        [HttpGet]
+        //[ValidateAntiForgeryToken]
+        public ActionResult<List<BookIdDetails>> AddBookIdsByClusterId(string clusterId)
+        {
+            try
+            {
+                var result = _service.AddBookIdsByClusterId(clusterId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+
+
+        [Route("GetCreateClusterData")]
+        [HttpGet]
+        public ActionResult<List<BookIdDetails>> GetCreateClusterData([FromQuery]List<string> bookIds)
+        {
+            Console.WriteLine("BookIds received:");
+            foreach (var id in bookIds)
+                Console.WriteLine(id);
+            try
+            {
+                var result = _service.GetCreateClusterData(bookIds);
                 return Ok(result);
             }
             catch (Exception ex)
