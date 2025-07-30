@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Data.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 using Service.Services.Interfaces;
@@ -84,14 +85,12 @@ namespace SystemCluster.Controllers
                 return StatusCode(500, $"Error: {ex.Message}");
             }
         }
-
         [HttpPost("AddNewBookIdToExistCluster")]
-        [HttpPost]
-        public IActionResult AddNewBookIdToExistCluster([FromBody] string[] bookIds, [FromQuery] string clusterId)
+        public IActionResult AddNewBookIdToExistCluster([FromBody] NewClusterFromSystem newClusterFromSystem)
         {
             try
             {
-                _service.AddNewBookIdToExistCluster(bookIds,clusterId);
+                _service.AddNewBookIdToExistCluster(newClusterFromSystem);
                 return Ok();
             }
             catch (Exception ex)
@@ -99,7 +98,6 @@ namespace SystemCluster.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
 
         [Route("GetCreateClusterData")]
         [HttpGet]
@@ -113,6 +111,20 @@ namespace SystemCluster.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, $"Error: {ex.Message}");
+            }
+        }
+
+        [HttpPost("CreateNewCluster")]
+        public IActionResult CreateNewCluster([FromBody] List<string> bookIds)
+        {
+            try
+            {
+                var clusterId = _service.CreateNewCluster(bookIds);
+                return Ok(new { ClusterId = clusterId });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
             }
         }
 

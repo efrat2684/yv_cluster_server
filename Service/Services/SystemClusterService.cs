@@ -1,4 +1,5 @@
-﻿using Data.Repositories.Interfaces;
+﻿using Data.Models;
+using Data.Repositories.Interfaces;
 using Service.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -40,13 +41,18 @@ namespace Service.Services
             return _repository.AddBookIdsByClusterId(clusterId);
         }
 
-        public void AddNewBookIdToExistCluster(string[] bookIds, string clusterId)
+        public void AddNewBookIdToExistCluster(NewClusterFromSystem newClusterFromSystem)
         {
-            _repository.AddNewBookIdToExistCluster(bookIds, clusterId);
+            _repository.AddNewBookIdToExistCluster(newClusterFromSystem);
         }
         public List<BookIdDetails> GetCreateClusterData(List<string> bookIds)
         {
             return _repository.GetCreateClusterData(bookIds);
+        }
+
+        public string CreateNewCluster(List<string> bookIds)
+        {
+            return _repository.CreateNewCluster(bookIds);
         }
     }
 }

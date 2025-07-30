@@ -90,73 +90,7 @@ namespace Data.Repositories
             };
             return bookIdDetailsObject;
         }
-//<<<<<<< HEAD
-//        public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
-//        {
-//=======
-//        public BookIdDetails createNewBookIdDetails(DataRow row)
-//        {
-//            BookIdDetails bookIdDetailsObject = new BookIdDetails
-//            {
-//                BookId = row["BookId"] == DBNull.Value ? "" : row["BookId"].ToString().Trim(),
-//                FirstName = new ValueCodeItem
-//                {
-//                    Value = row["FirstName"] == DBNull.Value ? "" : row["FirstName"].ToString().Trim(),
-//                    Code = row["FirstNameCode"] == DBNull.Value ? "" : row["FirstNameCode"].ToString().Trim()
-//                },
-//                LastName = new ValueCodeItem
-//                {
-//                    Value = row["LastName"] == DBNull.Value ? "" : row["LastName"].ToString().Trim(),
-//                    Code = row["LastNameCode"] == DBNull.Value ? "" : row["LastNameCode"].ToString().Trim()
-//                },
-//                FatherFirstName = new ValueCodeItem
-//                {
-//                    Value = row["FatherName"] == DBNull.Value ? "" : row["FatherName"].ToString().Trim(),
-//                    Code = row["FatherNameCode"] == DBNull.Value ? "" : row["FatherNameCode"].ToString().Trim()
-//                },
-//                MotherFirstName = new ValueCodeItem
-//                {
-//                    Value = row["MotherName"] == DBNull.Value ? "" : row["MotherName"].ToString().Trim(),
-//                    Code = row["MotherNameCode"] == DBNull.Value ? "" : row["MotherNameCode"].ToString().Trim()
-//                },
-//                SpouseFirstName = new ValueCodeItem
-//                {
-//                    Value = row["SpouseFirstName"] == DBNull.Value ? "" : row["SpouseFirstName"].ToString().Trim(),
-//                    Code = row["SpouseFirstNameCode"] == DBNull.Value ? "" : row["SpouseFirstNameCode"].ToString().Trim()
-//                },
-//                DateOfBirth = new ValueCodeItem
-//                {
-//                    Value = row["DateOfBirth"] == DBNull.Value ? "" : row["DateOfBirth"].ToString().Trim(),
-//                    Code = row["DateOfBirth"] == DBNull.Value ? "" : row["DateOfBirth"].ToString().Trim()
-//                },
-//                PlaceOfBirth = new ValueCodeItem
-//                {
-//                    Value = row["PlaceOfBirth"] == DBNull.Value ? "" : row["PlaceOfBirth"].ToString().Trim(),
-//                    Code = row["PlaceOfBirthCode"] == DBNull.Value ? "" : row["PlaceOfBirthCode"].ToString().Trim()
-//                },
-//                PermanentPlace = new ValueCodeItem
-//                {
-//                    Value = row["PermanentPlace"] == DBNull.Value ? "" : row["PermanentPlace"].ToString().Trim(),
-//                    Code = row["PermanentPlaceCode"] == DBNull.Value ? "" : row["PermanentPlaceCode"].ToString().Trim()
-//                },
-//                Source = new ValueCodeItem
-//                {
-//                    Value = row["Source"] == DBNull.Value ? "" : row["Source"].ToString().Trim(),
-//                    Code = row["SourceCode"] == DBNull.Value ? "" : row["SourceCode"].ToString().Trim()
-//                },
-//                MaidenName = row["MaidenName"] == DBNull.Value ? "" : row["MaidenName"].ToString().Trim(),
-//                IsClustered = row["IsClustered"] == DBNull.Value ? 0 : Convert.ToInt32(row["IsClustered"]),
-//                ExistsClusterId = row["ExistsClusterId"] == DBNull.Value ? "" : row["ExistsClusterId"].ToString().Trim(),
-//                RelatedFnameGroupId = row["RelatedFnameGroupId"] == DBNull.Value ? null : row["RelatedFnameGroupId"],
-//                IsHasRelatedFname = row["RelatedFnameList"] == DBNull.Value ? false : Convert.ToBoolean(row["RelatedFnameList"]),
-//                Ind = row["Ind"] == DBNull.Value ? 0 : Convert.ToInt32(row["Ind"]),
-//                HasRelatedGroups = row["HasRelatedGroups"] == DBNull.Value ? false : Convert.ToBoolean(row["HasRelatedGroups"]),
-//                NumberOfSuggestions = row["NumberOfSuggestions"] == DBNull.Value ? 0 : Convert.ToInt32(row["NumberOfSuggestions"]),
-//                RelatedFnameList = row["RelatedFnameList"] == DBNull.Value ? null : row["RelatedFnameList"],
-//                Score = row["Score"] == DBNull.Value ? "" : row["Score"].ToString().Trim(),
-//            };
-//            return bookIdDetailsObject;
-//        }
+
         public ClusterGroupWithCrmLinks GetClusterGroupDetails(int groupId)
         {
             string query = "select * from namesData n join groups g on n.bookId = g.bookId where g.groupId = @groupId";
@@ -339,31 +273,23 @@ namespace Data.Repositories
             return results;
         }
 
-        public void AddNewBookIdToExistCluster(string[] bookIds, string clusterId)
+        public void AddNewBookIdToExistCluster(NewClusterFromSystem newClusterFromSystem)
         {
             string insertQuery = "INSERT INTO newClusterFromSystem (BookId, ClusterId, CreateDate) VALUES (@BookId, @ClusterId, @CreateDate)";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                try
-                {
-                    connection.Open();
+                connection.Open();
 
-                    foreach (string bookId in bookIds)
-                    {
-                        using (SqlDataAdapter insertAdapter = new SqlDataAdapter())
-                        {
-                            insertAdapter.InsertCommand = new SqlCommand(insertQuery, connection);
-                            insertAdapter.InsertCommand.Parameters.AddWithValue("@BookId", bookId);
-                            insertAdapter.InsertCommand.Parameters.AddWithValue("@ClusterId", clusterId);
-                            insertAdapter.InsertCommand.Parameters.AddWithValue("@CreateDate", DateTime.Now);
-                            insertAdapter.InsertCommand.ExecuteNonQuery();
-                        }
-                    }
-                }
-                catch (Exception)
+                foreach (string bookId in newClusterFromSystem.BookId)
                 {
-                    throw;
+                    using (SqlCommand cmd = new SqlCommand(insertQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@BookId", bookId);
+                        cmd.Parameters.AddWithValue("@ClusterId", newClusterFromSystem.ClusterId);
+                        cmd.Parameters.AddWithValue("@CreateDate", DateTime.Now); // או DateTime.UtcNow
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
         }
@@ -438,6 +364,37 @@ namespace Data.Repositories
                 }
             }
             return results;
+        }
+
+        public string CreateNewCluster(List<string> bookIds)
+        {
+            // שלב 1: הפקת ClusterId חדש (למשל, ע"י שליפת המקסימום מה-DB והוספת 1)
+            string getMaxClusterIdQuery = "SELECT ISNULL(MAX(CAST(SUBSTRING(ClusterId, 9, LEN(ClusterId)) AS INT)), 0) FROM newClusterFromSystem WHERE ISNUMERIC(SUBSTRING(ClusterId, 9, LEN(ClusterId))) = 1";
+            int nextId = 1;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand(getMaxClusterIdQuery, connection))
+                {
+                    var result = cmd.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int maxId))
+                        nextId = maxId + 1;
+                }
+
+                string clusterId = $"CLUSTER_{nextId}";
+                string insertQuery = "INSERT INTO newClusterFromSystem (BookId, ClusterId, CreateDate) VALUES (@BookId, @ClusterId, @CreateDate)";
+                foreach (string bookId in bookIds)
+                {
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
+                    {
+                        insertCmd.Parameters.AddWithValue("@BookId", bookId);
+                        insertCmd.Parameters.AddWithValue("@ClusterId", clusterId);
+                        insertCmd.Parameters.AddWithValue("@CreateDate", DateTime.Now);
+                        insertCmd.ExecuteNonQuery();
+                    }
+                }
+                return clusterId;
+            }
         }
 
     }

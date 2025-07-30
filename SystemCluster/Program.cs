@@ -30,11 +30,6 @@ namespace SystemCluster
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ISystemClusterService, SystemClusterService>();
             builder.Services.AddScoped<ISystemClusterRepository, SystemClusterRepository>();
-            builder.Services.AddScoped<ICreateClusterService, CreateClusterService>();
-            builder.Services.AddScoped<ICreateClusterRepository, CreateClusterRepository>();
-
-
-
             builder.Services.AddScoped<IAutoclusterService, AutoClusterService>();
             builder.Services.AddScoped<IAutoClusterRepository, AutoClusterRepository>();
             builder.Services.AddScoped<IConnectionFactory, SqlConnectionFactory>();

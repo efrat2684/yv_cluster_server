@@ -8,8 +8,8 @@ namespace Data.Models
 {
     public class NewClusterFromSystem
     {
-        public string BookId { get; set; }
+        public List<string>BookId { get; set; }
         public string ClusterId { get; set; }
-        public DateTime CreateDate { get; set; }
+        public DateTime? CreateDate { get; set; }
     }
 }
